@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "learn-streamlit"
+version = "0.1.0"
+description = ""
+authors = ["A-Quaglia <augustoquaglia@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.32.2"
+taskipy = "^1.12.2"
+pytest = "^8.1.1"
+black = "^24.3.0"
+isort = "^5.13.2"
+mkdocs = "^1.5.3"
+pandas = "^2.2.1"
+numpy = "^1.26.4"
+seaborn = "^0.13.2"
+matplotlib = "^3.8.3"
+altair = "^5.2.0"
+plotly = "^5.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.taskipy]
+format = """
+isort .
+format .
+"""
+tests = "pytest -v"
+doc = "mkdocs serve"
